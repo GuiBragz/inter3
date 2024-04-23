@@ -1,0 +1,81 @@
+body{
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    transition: background-image 0.5s ease;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Alinha os itens à esquerda */
+    margin: 24px;
+    margin-left: 20px;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+.container :hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.texto {
+    text-align: center;
+    color: #A93A2F;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    border-radius: 20px;
+    border: 2px solid ;
+    transition: background-color 0.3s ease;
+}
+
+.convenios{
+    text-align: center;
+    color:#690f07;
+    font-size: larger;
+    transition: background-color 0.3s ease;
+}
+
+.espec {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 200px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.espec a {
+    
+    padding: 20px;
+    color: #690f07;
+    line-height: 1.5; /* Define a altura da linha para criar espaço entre as linhas */
+    display: block; /* Para garantir que cada link ocupe uma linha inteira */
+    text-decoration: none;
+}
+
+.cirurgiageral a{
+    font-size: 55px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+.imag:hover {
+    transform: scale(1);
+}
+
+.back {
+    top: 5px;
+    right: 0px;
+    position: absolute;
+    z-index: -1;
+    width: 85%;
+    height: 120px;
+}
