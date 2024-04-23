@@ -1,0 +1,60 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Adiciona transição suave para a mudança de cor de fundo e texto */
+    background-color: #fff; /* Cor de fundo padrão */
+    color: #333; /* Cor de texto padrão */
+}
+
+.tema-escuro {
+    background-color: #333; /* Altera a cor de fundo para um tema escuro */
+    color: #fff; /* Altera a cor do texto para branco */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.card {
+    width: 45%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 38px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: inherit; /* Herda a cor do texto do elemento pai */
+}
+
+.card p {
+    font-size: 20px;
+    color: inherit; /* Herda a cor do texto do elemento pai */
+}
+
+.title {
+    text-align: center;
+    color: #A93A2F;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    border-radius: 20px;
+    border: 2px solid ;
+}
+
+li {
+    font-size: 20px;
+    color: inherit; /* Herda a cor do texto do elemento pai */
+}
+
+@media screen and (max-width: 550px) {
+    .link {
+        display: none;
+    }
+} 

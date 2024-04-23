@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLINICOR - Marcar Consulta</title>
+    <link rel="stylesheet" href="cssmarcarconsulta_exames.css">
+    <link rel="icon" href="../images/favicon.ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none; /* Inicialmente, oculte as mensagens de erro */
+        }
+
+        .option-container2 input,
+        .option-container2 select {
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <iframe src="barra_user.html" width="100%" height="105px" frameborder="0"></iframe>
+
+    <!-- Formulário de Marcação de Consulta -->
+    <div class="container">
+        <form id="marcar-consulta-form" action="processar_formulario.php" method="POST">
+            <div class="option-container">
+                <p class="option-label">Escolha o procedimento:</p>
+                <select name="procedimento" id="procedimento">
+                    <option value="exame">Exame</option>
+                    <option value="consulta">Consulta</option>
+                </select>
+            </div>
+
+            <div class="option-container">
+                <p class="option-label">Escolha a especialidade:</p>
+                <select name="especialidade" id="especialidade">
+                    <!-- Opções de especialidades -->
+                    <option value="angiologia">Angiologia</option>
+                    <option value="cardiologia">Cardiologia</option>
+                    <option value="cirurgia_geral">Cirurgia Geral</option>
+                    <option value="dermatologia">Dermatologia</option>
+                    <option value="endocrinologia">Endocrinologia</option>
+                    <option value="fonoaudiologia">Fonoaudiologia</option>
+                    <option value="gastroenterologia">Gastroenterologia</option>
+                    <option value="ginecologia_obstetricia">Ginecologia (Obstetrícia)</option>
+                    <option value="mastologia">Mastologia</option>
+                    <option value="neurologia">Neurologia</option>
+                    <option value="oftalmologia">Oftalmologia</option>
+                    <option value="ortopedia">Ortopedia</option>
+                    <option value="otorrinolaringologia">Otorrinolaringologia</option>
+                    <option value="pneumologia">Pneumologia</option>
+                    <option value="urologia">Urologia</option>
+                    <option value="reumatologia">Reumatologia</option>
+                </select>
+            </div> 
+            <div class="option-container">
+                <p class="option-label">Selecione o dia:</p>
+                <select name="dia" id="dia">
+                    <!-- Opções de dias -->
+                    <option value="segunda">Segunda-feira</option>
+                    <option value="terca">Terça-feira</option>
+                    <option value="quarta">Quarta-feira</option>
+                    <option value="quinta">Quinta-feira</option>
+                    <option value="sexta">Sexta-feira</option>
+                    <option value="sabado">Sábado</option>
+                    <option value="domingo">Domingo</option>
+
+                </select>
+            </div>
+
+            <div class="option-container">
+                <p class="option-label">Escolha o médico:</p>
+                <select name="medico" id="medico">
+                    <!-- Opções de médicos -->
+                    <option value="Medico_Angiologia">Medico Angiologia Fulano(a)X</option>
+
+                </select>
+            </div>
+
+            <div class="option-container">
+                <p class="option-label">Selecione a hora:</p>
+                <select name="hora" id="hora">
+                    <!-- Opções de horário -->
+                    <option value="08:00">08:00</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+
+                </select>
+            </div>
+            <!-- Informações do Paciente -->
+            <div class="option-container2">
+                <p class="option-label">Nome:</p>
+                <input type="text" id="nome" name="nome">
+                <p class="error-message" id="nome-error">Campo obrigatório</p>
+            </div>
+            <div class="option-container2">
+                <p class="option-label">E-mail:</p>
+                <input type="email" id="email" name="email">
+                <p class="error-message" id="email-error">Campo obrigatório</p>
+            </div>
+            <div class="option-container2">
+                <p class="option-label">Telefone:</p>
+                <input type="tel" id="telefone" name="telefone">
+                <p class="error-message" id="telefone-error">Campo obrigatório</p>
+            </div>
+            <div class="option-container2">
+                <p class="option-label">Forma de Pagamento:</p>
+                <select name="forma_pagamento" id="forma_pagamento">
+                    <option value="dinheiro">Dinheiro</option>
+                    <option value="cartao">Cartão</option>
+                </select>
+            </div>
+            
+            <!-- Confirmação -->
+            <div class="option-container">
+                <p class="option-label">Confirmação:</p>
+                <input type="checkbox" name="confirmacao" id="confirmacao">
+                <label for="confirmacao">Estou ciente de que, em caso de falta sem justificativa, precisarei pagar uma taxa.</label>
+                <p class="error-message" id="confirmacao-error">Você deve concordar com isso</p>
+            </div>
+            <!-- Botões -->
+            <button type="submit" class="button" id="enviar">Enviar</button>
+            <button type="reset" class="button" id="limpar">Limpar</button>
+        </form>
+    </div>
+    
+    <script>
+        // JavaScript
+    </script>
+
+</body>
+</html>
